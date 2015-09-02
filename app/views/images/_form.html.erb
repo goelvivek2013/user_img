@@ -1,0 +1,6 @@
+<%= form_for [@user, @user.images.build] do |f| %>
+  <%= f.file_field :avatar, id: 'image_avatar' %>
+  <%= f.cropbox :avatar, width: 300, height: 300 %>
+  <%= f.previewbox :avatar %>
+  <%= f.submit %>
+<% end %>
